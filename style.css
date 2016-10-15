@@ -16,3 +16,10 @@ p{
     padding: 1%;
   
 }
+
+@media screen and (min-width: 640px) {
+p{
+ font-size: 20px; 
+  
+  }
+}
