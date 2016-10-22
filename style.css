@@ -1,3 +1,9 @@
+canvas {
+  border-style: solid;
+  border-color: aqua;
+  border-width: 3px;
+}
+
 .comingsoon{
   max-width: 40%;
   margin: auto;
