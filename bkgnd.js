@@ -7,8 +7,10 @@ var blobs = [];
 
 function setup() {
  createCanvas(1270, 720);
- for (var i = 0; i < 14; i++) {
-   blobs.push(new Blob(i, i*35, random(10, 40), random(0,110), random(100,150), random(100,150), random(80, 190)));
+ for (var i = 1; i < 14; i++) {
+//   blobs.push(new Blob(i, i*35, random(10, 40), random(0,110), random(100,150), random(100,150), random(80, 190)));
+   blobs.push(new Blob(i, i*35, random(10, 40), i*14, 0, i*30, 205));
+
  }
               
 }
