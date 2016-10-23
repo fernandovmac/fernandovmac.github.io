@@ -6,9 +6,9 @@ var blobs = [];
 
 
 function setup() {
- createCanvas(1280, 300);
- for (var i = 0; i < 12; i++) {
-   blobs.push(new Blob(i*100, random(height), random(100,300), random(0,110), random(100,150), random(100,150), random(50, 190)));
+ createCanvas(1270, 720);
+ for (var i = 0; i < 14; i++) {
+   blobs.push(new Blob(i, i*35, random(10, 40), random(0,110), random(100,150), random(100,150), random(80, 190)));
  }
               
 }
@@ -39,15 +39,16 @@ var yoff=0;
   noStroke();  
   push();
   translate(this.pos.x, this.pos.y);
-  var xoff = map(mouseX, 0, width, -2,2);
+  var xoff = map(mouseX, 0, width, 120,130);
   beginShape();
-  for (var a = 0; a < TWO_PI-2; a += 1) {
-    var offset = map(noise(xoff, yoff), 0, 1, a*10, 100);
+  for (var a = 0; a < TWO_PI/3; a += 0.1) {
+    var offset = map(noise( xoff, yoff), 0, 1, 80,300) ;
     var distort = r + offset;
-    var x = distort * cos(a);
+    var x = distort * 10 * cos(a);
     var y = distort * sin(a);
     vertex(x, y);
-    xoff += 10000.9;
+    xoff += 10.9;
+//    xoff += random(100);
     
   }
   endShape(CLOSE);
